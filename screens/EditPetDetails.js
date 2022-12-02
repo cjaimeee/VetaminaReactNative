@@ -17,7 +17,7 @@ const EditPetDetailsScreen = ( {navigation, route} ) => {
 
     const getPetInfo = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/edit-pets/${pet_id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/edit-pets/${pet_id}`);
         const json = await response.json();
         setData(json.pet);
         } catch (error) {
@@ -90,7 +90,7 @@ const EditPetDetailsScreen = ( {navigation, route} ) => {
 
     const updatePet = async () => {
         try{
-            const response = await fetch(`http://localhost:8000/api/update-pets/${pet_id}`, {
+            const response = await fetch(`http://10.0.2.2:8000/api/update-pets/${pet_id}`, {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',

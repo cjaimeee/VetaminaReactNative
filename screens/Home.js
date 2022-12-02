@@ -9,7 +9,7 @@ const HomeScreen = ( {navigation} ) => {
 
     const getAppointments = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/recentAppointment/${id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/recentAppointment/${id}`);
         const json = await response.json();
         setData(json.appointments);
         } catch (error) {
@@ -21,7 +21,7 @@ const HomeScreen = ( {navigation} ) => {
 
     const getPets = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/recentPet/${id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/recentPet/${id}`);
         const json = await response.json();
         setPetData(json.pets);
         } catch (error) {

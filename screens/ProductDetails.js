@@ -8,7 +8,7 @@ const ProductDetailsScreen = ( {navigation, route} ) => {
 
     const getClinic = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/oneClinic/${route.params.item.clinic_id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/oneClinic/${route.params.item.clinic_id}`);
         const json = await response.json();
         setData(json.oneClinic);
         } catch (error) {

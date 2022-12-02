@@ -12,7 +12,7 @@ import AppointmentProcedureScreen from './screens/AppointmentProcedure';
 import AppointmentDateAndTimeScreen from './screens/AppointmentDateAndTime';
 import AppointmentSelectPetScreen from './screens/AppointmentSelectPet';
 
-import TabNavigator from './navs/tabNavigator';
+import TabNavigator from './navs/TabNavigator';
 import NotificationScreen from './screens/Notifications';
 import ClinicDetailsScreen from './screens/ClinicDetails';
 import AddPetScreen from './screens/AddPet';

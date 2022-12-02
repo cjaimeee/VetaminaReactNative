@@ -31,7 +31,7 @@ const SearchScreen = ( {navigation} ) => {
     }
 
     const fetchClinics = () => {
-        const apiURL = `http://localhost:8000/api/clinics2`;
+        const apiURL = `http://10.0.2.2:8000/api/clinics2`;
         fetch(apiURL)
         .then((response) => response.json())
         .then((responseJson) => {

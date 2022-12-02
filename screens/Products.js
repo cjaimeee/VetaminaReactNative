@@ -10,7 +10,7 @@ const ProductsScreen = ( {navigation} ) => {
   
     const getProducts = async () => {
       try {
-      const response = await fetch(`http://localhost:8000/api/all-products`);
+      const response = await fetch(`http://10.0.2.2:8000/api/all-products`);
       const json = await response.json();
       setData(json.products);
       } catch (error) {

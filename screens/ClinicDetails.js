@@ -13,7 +13,7 @@ const ClinicDetailsScreen = ( {navigation, route} ) => {
 
     const getServices = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/services/${route.params.item.id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/services/${route.params.item.id}`);
         const json = await response.json();
         setServiceData(json.services);
         } catch (error) {
@@ -25,7 +25,7 @@ const ClinicDetailsScreen = ( {navigation, route} ) => {
 
     const getProducts = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/products/${route.params.item.id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/products/${route.params.item.id}`);
         const json = await response.json();
         setProductData(json.products);
         } catch (error) {

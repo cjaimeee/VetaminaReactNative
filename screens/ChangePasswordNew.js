@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, Button, Text, Alert, StyleSheet, TextInput, ScrollView, Image, TouchableOpacity} from 'react-native';
+import {View, Button, Text, Alert, StyleSheet, TextInput, ScrollView, Image, TouchableOpacity, Dimensions} from 'react-native';
 
 const ChangePasswordNewScreen = ( {navigation} ) => {
     const [password, setPassword] = useState('');
@@ -10,7 +10,7 @@ const ChangePasswordNewScreen = ( {navigation} ) => {
 
     const updatePassword = async () => {
         try{
-            const response = await fetch(`http://localhost:8000/api/update-customeruser/${x}`, {
+            const response = await fetch(`http://10.0.2.2:8000/api/update-customeruser/${x}`, {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     marginTop: -150
     },
     whiteBox: {
-    width: 360,
+    width: Dimensions.get('window').width,
     height: 300,
     marginTop: 200,
     borderTopLeftRadius: 30,
@@ -129,13 +129,13 @@ const styles = StyleSheet.create({
     padding: 2,
     width: 300,
     height: 40,
-    marginLeft: 30,
     marginBottom: 10,
     borderColor: 'gray',
     borderBottomWidth: 1.5,
     shadowRadius: 10,
     fontSize: 20,
     color: 'black',
+    alignSelf: 'center'
     },
     textFailed: {
     color: 'red',

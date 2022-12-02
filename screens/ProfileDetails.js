@@ -9,7 +9,7 @@ const ProfileDetailsScreen = ( {navigation} ) => {
 
     const updateProfile = async () => {
         try{
-            const response = await fetch(`http://localhost:8000/api/update-profile/${global.id}`, {
+            const response = await fetch(`http://10.0.2.2:8000/api/update-profile/${global.id}`, {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',

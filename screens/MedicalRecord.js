@@ -10,7 +10,7 @@ const MedicalRecordScreen = ( {navigation, route} ) => {
 
     const getRecords = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/medicalrecord/${pet_ID}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/medicalrecord/${pet_ID}`);
         const json = await response.json();
         setData(json.medical_records);
         } catch (error) {

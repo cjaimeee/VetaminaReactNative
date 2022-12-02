@@ -8,7 +8,7 @@ const PetsScreen = ( {navigation} ) => {
 
   const getPets = async () => {
     try {
-    const response = await fetch(`http://localhost:8000/api/pets/${id}`);
+    const response = await fetch(`http://10.0.2.2:8000/api/pets/${id}`);
     const json = await response.json();
     setData(json.pets);
     } catch (error) {

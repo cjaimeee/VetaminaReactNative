@@ -95,7 +95,7 @@ const AddPetScreen = ( {navigation} ) => {
 
     const AddPetBtn = async () => {
         try{
-            const response = await fetch('http://localhost:8000/api/add-pets', {
+            const response = await fetch('http://10.0.2.2:8000/api/add-pets', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

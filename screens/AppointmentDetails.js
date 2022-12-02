@@ -7,7 +7,7 @@ const AppointmentDetailsScreen = ( {navigation, route} ) => {
   
     const getPets = async () => {
       try {
-      const response = await fetch(`http://localhost:8000/api/onePet/${route.params.item.pet}`);
+      const response = await fetch(`http://10.0.2.2:8000/api/onePet/${route.params.item.pet}`);
       const json = await response.json();
       setData(json.pets);
       } catch (error) {
@@ -37,7 +37,7 @@ const AppointmentDetailsScreen = ( {navigation, route} ) => {
     }
 
     const deleteAppointment = async () =>{
-      const response = await fetch(`http://localhost:8000/api/delete-appointment/${route.params.item.id}`, {
+      const response = await fetch(`http://10.0.2.2:8000/api/delete-appointment/${route.params.item.id}`, {
         method: 'DELETE'
       });
       if ((response).status === 200) {

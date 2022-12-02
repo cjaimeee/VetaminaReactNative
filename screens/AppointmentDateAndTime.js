@@ -65,7 +65,7 @@ const AppointmentDateAndTimeScreen = ( {navigation, route} ) => {
 
     const getProcedures = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/services/${clinic_ID}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/services/${clinic_ID}`);
         const json = await response.json();
         setProcedureData(json.services);
         const procedureSelection = json.services.map((procedures) => ({
@@ -82,7 +82,7 @@ const AppointmentDateAndTimeScreen = ( {navigation, route} ) => {
 
     const getPets = async () => {
         try {
-        const response = await fetch(`http://localhost:8000/api/pets/${id}`);
+        const response = await fetch(`http://10.0.2.2:8000/api/pets/${id}`);
         const json = await response.json();
         setPetsData(json.pets);
         const petSelection = json.pets.map((pet) => ({
@@ -101,7 +101,7 @@ const AppointmentDateAndTimeScreen = ( {navigation, route} ) => {
 
     const getAppointments = async () => {
         try {
-        const response = await fetch('http://localhost:8000/api/appointments/{id}');
+        const response = await fetch('http://10.0.2.2:8000/api/appointments/{id}');
         const json = await response.json();
         setData(json.appointments);
         } catch (error) {
@@ -119,7 +119,7 @@ const AppointmentDateAndTimeScreen = ( {navigation, route} ) => {
 
     const AddAppointmentBtn = async () => {
         try{
-            const response = await fetch('http://localhost:8000/api/add-appointments', {
+            const response = await fetch('http://10.0.2.2:8000/api/add-appointments', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

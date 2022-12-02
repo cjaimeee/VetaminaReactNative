@@ -6,7 +6,7 @@ const CoffeeAutonomous = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
-    const resp = await fetch("http://localhost:8000/api/clinics");
+    const resp = await fetch("http://10.0.2.2:8000/api/clinics");
     const data = await resp.json();
     setData(data);
     setLoading(false);

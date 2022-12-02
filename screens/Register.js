@@ -15,6 +15,7 @@ import {
     ScrollView,
     KeyboardAvoidingView,
     Keyboard,
+    Dimensions
 } from 'react-native';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 
@@ -56,7 +57,7 @@ const RegisterScreen = ( {navigation} ) => {
 
     const RegisterUser = async () => {
         try{
-            const response = await fetch('http://localhost:8000/api/customerregister', {
+            const response = await fetch('http://10.0.2.2:8000/api/customerregister', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -289,7 +290,7 @@ const RegisterScreen = ( {navigation} ) => {
             </ScrollView>
             </KeyboardAvoidingView>
             <View style = {{ backgroundColor: 'white', 
-            width: 360,
+            width: Dimensions.get('window').width,
             height: 200, }}>
 
             </View>
@@ -341,7 +342,7 @@ const styles = StyleSheet.create({
     marginTop: -120
     },
     whiteBox: {
-    width: 360,
+    width: Dimensions.get('window').width,
     height: 550,
     marginTop: 50,
     borderTopLeftRadius: 30,
@@ -364,13 +365,13 @@ const styles = StyleSheet.create({
     padding: 2,
     width: 300,
     height: 40,
-    marginLeft: 30,
     marginBottom: 10,
     borderColor: 'gray',
     borderBottomWidth: 1.5,
     shadowRadius: 10,
     fontSize: 20,
     color: 'black',
+    alignSelf: 'center'
     },
     hello: {
     fontSize: 30,
